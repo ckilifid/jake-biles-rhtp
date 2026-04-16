@@ -199,7 +199,7 @@
     The single most important node: Big Sky Care Connect.<br>
     Every Initiative 5.1 technology dollar flows through or alongside it.
   </div>
-  <svg id="diagram" viewBox="0 0 770 880"></svg>
+  <svg id="diagram" viewBox="0 0 1090 880"></svg>
 </div>
 
 <hr class="section-break">
@@ -375,14 +375,18 @@
       svg.appendChild(el);
     }
 
-    // ── Column separator ───────────────────────────────────────
+    // ── Column separators ──────────────────────────────────────
     add(rc.line(352, 12, 352, 800, {
+      roughness: 0.4, stroke: BLACK, strokeWidth: 0.8, strokeLineDash: [5, 5]
+    }));
+    add(rc.line(742, 12, 742, 800, {
       roughness: 0.4, stroke: BLACK, strokeWidth: 0.8, strokeLineDash: [5, 5]
     }));
 
     // ── Column headers ─────────────────────────────────────────
     t(176, 26, 'Federal Money + Policy Tailwind', 14, '700');
     t(547, 26, 'Allocation Stack', 14, '700');
+    t(930, 26, 'Montana Innovation Orbit', 14, '700');
 
     // ── Draw arrows BEFORE boxes so boxes cover endpoints ──────
 
@@ -446,6 +450,52 @@
     box(28, 800, 360, 62, { roughness: 2, strokeWidth: 2 });
     t(208, 826, '~8 competitive RFPs by September 2026.', 14, '700');
     t(208, 849, 'Window is open now.', 15, '700');
+
+    // ══ RIGHT COLUMN — Montana Innovation Orbit ════════════════
+
+    t(930, 44, '— R&D Pipeline —', 11, '700');
+
+    // Node 1: MSU TechLink
+    box(790, 52, 278, 63);
+    t(929, 73, 'MSU TechLink', 13, '700');
+    t(929, 90, 'University tech transfer', 10, 'normal');
+    t(929, 104, '50+ startups, DOD/VA lab licensing', 10, 'normal');
+
+    // Node 2: MonTEC
+    box(790, 130, 278, 68);
+    t(929, 151, 'MonTEC', 13, '700');
+    t(929, 168, 'UM-affiliated health tech incubator, Missoula', 10, 'normal');
+    t(929, 182, 'Houses active health data companies', 10, 'normal');
+
+    // Node 3: IntelligHealth — active competitor, slightly heavier border
+    box(790, 214, 278, 80, { strokeWidth: 1.8 });
+    t(929, 236, 'IntelligHealth', 13, '700');
+    t(929, 253, 'Bozeman — AI remote monitoring, SBIR-funded', 10, 'normal');
+    t(929, 267, 'MSU faculty-founded', 10, 'normal');
+    t(929, 281, 'Active competitor for Initiative 5.1 dollars', 10, '600');
+
+    t(930, 318, '— Access Infrastructure —', 11, '700');
+
+    // Node 4: Shadow Ridge / 1864 Capital
+    box(790, 327, 278, 76);
+    t(929, 347, 'Shadow Ridge Analytics / 1864 Capital', 11, '700');
+    t(929, 362, 'Belgrade — Morgan Weidow, VP at 1864 Capital', 10, 'normal');
+    t(929, 377, 'Credentialing and relationship access node', 10, '600');
+
+    // Node 5: Montana APEX Accelerator
+    box(790, 418, 278, 65);
+    t(929, 439, 'Montana APEX Accelerator', 13, '700');
+    t(929, 456, 'Procurement navigation, state + federal contracts', 10, 'normal');
+    t(929, 470, 'Free consulting — entry ramp to bids.mt.gov', 10, '600');
+
+    t(929, 506, '"Who\'s already in the room —', 11, 'normal');
+    t(929, 522, 'and how CAPTN gets credentialed to enter"', 11, 'normal');
+
+    // ── Cross-column arrows drawn last (appear on top) ─────────
+    // IntelligHealth → BSCC right outer edge
+    arrow(790, 254, 744, 285);
+    // Shadow Ridge → BSCC right outer edge (lower portion)
+    arrow(790, 365, 744, 382);
   }
 })();
 </script>
