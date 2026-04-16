@@ -199,7 +199,7 @@
     The single most important node: Big Sky Care Connect.<br>
     Every Initiative 5.1 technology dollar flows through or alongside it.
   </div>
-  <svg id="diagram" viewBox="0 0 1100 880"></svg>
+  <svg id="diagram" viewBox="0 0 770 880"></svg>
 </div>
 
 <hr class="section-break">
@@ -264,13 +264,6 @@
     <li>
       <div>
         CAPTN's play: not selling a procurement platform to the state, not competing with EHR vendors. Positioning as the intelligence layer on top of BSCC's HIE data — making the state's massive EHR investment actually useful at the point of care.
-      </div>
-    </li>
-
-    <li>
-      <div>
-        <span class="beat">Right column — the credentialing orbit</span>
-        Next Frontier Capital, Two Bear Capital, and Frontier Angels are the Montana VC firms most likely to have portfolio companies competing for Initiative 5.1 dollars. The play for CAPTN isn't investment — it's local relationship access and credentialing.
       </div>
     </li>
 
@@ -382,18 +375,14 @@
       svg.appendChild(el);
     }
 
-    // ── Column separators ──────────────────────────────────────
+    // ── Column separator ───────────────────────────────────────
     add(rc.line(352, 12, 352, 800, {
-      roughness: 0.4, stroke: BLACK, strokeWidth: 0.8, strokeLineDash: [5, 5]
-    }));
-    add(rc.line(742, 12, 742, 800, {
       roughness: 0.4, stroke: BLACK, strokeWidth: 0.8, strokeLineDash: [5, 5]
     }));
 
     // ── Column headers ─────────────────────────────────────────
     t(176, 26, 'Federal Money + Policy Tailwind', 14, '700');
     t(547, 26, 'Allocation Stack', 14, '700');
-    t(921, 26, 'Capital Ecosystem', 14, '700');
 
     // ── Draw arrows BEFORE boxes so boxes cover endpoints ──────
 
@@ -403,7 +392,6 @@
     arrow(547, 203, 547, 232);     // Init5 → BSCC
     arrow(547, 392, 547, 422);     // BSCC → Init5.1
     arrow(547, 522, 547, 550);     // Init5.1 → CAPTN
-    dline(756, 240, 742, 360);     // VC → BSCC (credentialing)
 
     // ══ LEFT COLUMN ════════════════════════════════════════════
 
@@ -452,45 +440,6 @@
     t(547, 600, 'Decisioning intelligence layer', 13, 'normal');
     t(547, 618, 'sits on top of BSCC + HIE data', 12, 'normal');
     t(547, 635, 'makes the EHR investment actionable at point of care', 11, 'normal');
-
-    // ══ RIGHT COLUMN ═══════════════════════════════════════════
-
-    box(756, 108, 308, 48);
-    t(910, 137, 'Next Frontier Capital', 14, '600');
-
-    box(756, 182, 308, 48);
-    t(910, 211, 'Two Bear Capital', 14, '600');
-
-    box(756, 256, 308, 48);
-    t(910, 285, 'Frontier Angels', 14, '600');
-
-    t(910, 330, '"Local credentialing +', 12, 'normal');
-    t(910, 348, 'relationship access —', 12, 'normal');
-    t(910, 366, 'the bridge to the', 12, 'normal');
-    t(910, 384, 'procurement conversation"', 12, 'normal');
-
-    // ══ CALLOUT: Questions Worth Testing ═══════════════════════
-
-    box(752, 445, 326, 305, { roughness: 2.2, strokeWidth: 2 });
-    t(915, 468, '— Questions Worth Testing —', 13, '700');
-
-    t(760, 492, '1. Has CAPTN been in conversation with', 11, 'normal', 'start');
-    t(760, 508, '   Big Sky Care Connect?', 11, 'normal', 'start');
-    t(760, 524, '   Q2 2026 SOW finalizing now.', 11, '600', 'start');
-
-    t(760, 545, '2. Is DPHHS open to a third-party decisioning', 11, 'normal', 'start');
-    t(760, 561, '   layer on top of the HIE, or building in-house?', 11, 'normal', 'start');
-
-    t(760, 582, '3. What is the RFP timeline for', 11, 'normal', 'start');
-    t(760, 598, '   Initiative 5.1 specifically?', 11, 'normal', 'start');
-
-    t(760, 619, '4. eMACS fully replaced — RFP closed Feb 2026.', 11, 'normal', 'start');
-    t(760, 635, '   State: "a bottleneck for efficient govt ops."', 11, 'normal', 'start');
-    t(760, 651, '   Is there a CAPTN positioning angle', 11, 'normal', 'start');
-    t(760, 667, '   during the procurement system transition?', 11, '600', 'start');
-
-    t(760, 700, '   [ RFP DOA-2026-0230AL closed Feb 24, 2026.', 9, 'normal', 'start');
-    t(760, 714, '     State evaluating or has selected vendor. ]', 9, 'normal', 'start');
 
     // ══ RFP CLOCK ══════════════════════════════════════════════
 
