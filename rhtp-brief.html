@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Montana RHTP — Jake Biles Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/roughjs@4.6.6/bundled/rough.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-family: 'Caveat', cursive;
+  }
+
+  /* ── VISUAL SECTION ─────────────────────────────────────────── */
+
+  .visual-section {
+    padding: 22px 20px 28px 20px;
+  }
+
+  .headline {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 16px auto;
+    line-height: 1.55;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #000;
+    color: #000;
+  }
+
+  #diagram {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+  }
+
+  /* ── SECTION BREAK ──────────────────────────────────────────── */
+
+  .section-break {
+    border: none;
+    border-top: 3px solid #000;
+    margin: 0;
+  }
+
+  /* ── COMPANION SECTION ──────────────────────────────────────── */
+
+  .companion-section {
+    padding: 36px 48px 40px 48px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .doc-title {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 7px 0;
+    margin-bottom: 26px;
+    color: #000;
+    overflow: hidden;
+  }
+
+  .doc-subtitle {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    float: right;
+    margin-top: 1px;
+    color: #000;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: item;
+    margin-bottom: 36px;
+  }
+
+  ol li {
+    counter-increment: item;
+    display: flex;
+    gap: 14px;
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+    color: #000;
+  }
+
+  ol li::before {
+    content: counter(item) ".";
+    font-weight: 700;
+    font-size: 17px;
+    min-width: 26px;
+    flex-shrink: 0;
+    padding-top: 1px;
+    color: #000;
+  }
+
+  ol li .beat {
+    display: block;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    color: #000;
+  }
+
+  ol li.bscc-highlight {
+    border-left: 3px solid #000;
+    padding-left: 10px;
+    background: #fff;
+  }
+
+  .companion-divider {
+    border: none;
+    border-top: 2px solid #000;
+    margin: 30px 0 20px 0;
+  }
+
+  .what-to-test-header {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    color: #000;
+  }
+
+  .test-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .test-list li {
+    font-size: 16px;
+    line-height: 1.65;
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    color: #000;
+  }
+
+  .test-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .emacs-note {
+    font-size: 13px;
+    color: #000;
+    margin-top: 6px;
+    padding-left: 0;
+  }
+
+  .doc-footer {
+    margin-top: 32px;
+    border-top: 1px solid #000;
+    padding-top: 10px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ── PRINT ──────────────────────────────────────────────────── */
+
+  @media print {
+    @page { size: 11in 8.5in landscape; margin: 0.35in; }
+    body { padding: 0; }
+    .headline { font-size: 15px; }
+    .visual-section { padding: 0 0 16px 0; }
+    .companion-section { padding: 24px 24px 24px 24px; max-width: 100%; }
+    .section-break { page-break-before: always; border-top: 2px solid #000; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 1: WHITEBOARD ECOLOGY MAP
+════════════════════════════════════════════════════════════ -->
+
+<div class="visual-section">
+  <div class="headline">
+    The single most important node: Big Sky Care Connect.<br>
+    Every Initiative 5.1 technology dollar flows through or alongside it.
+  </div>
+  <svg id="diagram" viewBox="0 0 1100 880"></svg>
+</div>
+
+<hr class="section-break">
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 2: COMPANION REFERENCE
+════════════════════════════════════════════════════════════ -->
+
+<div class="companion-section">
+
+  <div class="doc-title">
+    Montana RHTP Ecology Map — Companion Reference
+    <span class="doc-subtitle">One node per row. Follow the whiteboard left-to-right, top-to-bottom.</span>
+  </div>
+
+  <ol>
+
+    <li>
+      <div>
+        <span class="beat">Left column — the setup</span>
+        CMS releases $233M to Montana in Year One — part of a $50B national Rural Health Transformation Program. The money is real and it's moving.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        Governor Gianforte and DPHHS built the application. Montana ranked fourth-highest allocation of any state.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        Senator Sheehy isn't the allocator — but his two bills (Critical Access for Veterans Care Act + CONNECT for Health Act) are routing more patients and more data to the exact rural facilities this money is modernizing.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        <span class="beat">Center column — the gate</span>
+        DPHHS is the allocator. Five initiatives. The one that matters here: Initiative 5 — Technology Innovation.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        Initiative 5 splits into two tracks: EHR modernization (hospitals buying Epic/Cerner) and data usability (making the data actionable at the point of care). CAPTN's lane is the second one.
+      </div>
+    </li>
+
+    <li class="bscc-highlight">
+      <div>
+        <strong>Big Sky Care Connect (BSCC)</strong> is the state-designated Health Information Exchange. DPHHS is finalizing a Statement of Work with BSCC right now — Q2 2026. Every Initiative 5.1 dollar flows through or alongside it. This is the gate.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        Initiative 5.1 is explicitly calling for "provider-facing tools to translate analytics into actionable insights at the point of care." A behavioral health bed registry is the named near-term use case. That description is CAPTN's decisioning intelligence layer.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        CAPTN's play: not selling a procurement platform to the state, not competing with EHR vendors. Positioning as the intelligence layer on top of BSCC's HIE data — making the state's massive EHR investment actually useful at the point of care.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        <span class="beat">Right column — the credentialing orbit</span>
+        Next Frontier Capital, Two Bear Capital, and Frontier Angels are the Montana VC firms most likely to have portfolio companies competing for Initiative 5.1 dollars. The play for CAPTN isn't investment — it's local relationship access and credentialing.
+      </div>
+    </li>
+
+    <li>
+      <div>
+        <span class="beat">The clock</span>
+        ~8 competitive RFPs by September 2026. The window to position alongside BSCC is open now and closes fast.
+      </div>
+    </li>
+
+  </ol>
+
+  <hr class="companion-divider">
+
+  <div class="what-to-test-header">What to Test</div>
+
+  <ul class="test-list">
+
+    <li>
+      Has CAPTN been in conversation with Big Sky Care Connect? The Q2 2026 SOW is finalizing now.
+    </li>
+
+    <li>
+      Is DPHHS open to a third-party decisioning layer on top of the HIE, or are they building it in-house?
+    </li>
+
+    <li>
+      eMACS is being fully replaced. RFP closed February 24, 2026. The state called it "a bottleneck for efficient government operations." CAPTN may have a positioning opportunity as the intelligence layer during that procurement system transition.
+      <div class="emacs-note">RFP DOA-2026-0230AL — state is currently evaluating vendors or has recently selected one.</div>
+    </li>
+
+  </ul>
+
+  <div class="doc-footer">
+    <span>Red One Medical / CAPTN — Montana RHTP briefing</span>
+    <span>Paired with: rhtp-ecology-map (above)</span>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     ROUGH.JS DIAGRAM
+════════════════════════════════════════════════════════════ -->
+
+<script>
+(function() {
+  function boot() {
+    if (typeof rough === 'undefined') { setTimeout(boot, 80); return; }
+    document.fonts.ready.then(draw);
+  }
+  boot();
+
+  function draw() {
+    var svg = document.getElementById('diagram');
+    var rc = rough.svg(svg);
+    var NS = 'http://www.w3.org/2000/svg';
+
+    var BLACK = '#000';
+    var WHITE = '#fff';
+
+    function add(el) { svg.appendChild(el); }
+
+    var BOX_OPTS = {
+      roughness: 1.6,
+      stroke: BLACK,
+      strokeWidth: 1.6,
+      fill: WHITE,
+      fillStyle: 'solid'
+    };
+
+    function box(x, y, w, h, extra) {
+      add(rc.rectangle(x, y, w, h, Object.assign({}, BOX_OPTS, extra || {})));
+    }
+
+    function heavyBox(x, y, w, h) {
+      add(rc.rectangle(x - 5, y - 5, w + 10, h + 10, {
+        roughness: 2.4, stroke: BLACK, strokeWidth: 3, fill: WHITE, fillStyle: 'solid'
+      }));
+      add(rc.rectangle(x, y, w, h, {
+        roughness: 1.8, stroke: BLACK, strokeWidth: 2, fill: WHITE, fillStyle: 'solid'
+      }));
+    }
+
+    function arrow(x1, y1, x2, y2) {
+      var o = { roughness: 1.2, stroke: BLACK, strokeWidth: 1.6 };
+      add(rc.line(x1, y1, x2, y2, o));
+      var a = Math.atan2(y2 - y1, x2 - x1), L = 13, s = 0.38;
+      var tip = { roughness: 0.8, stroke: BLACK, strokeWidth: 1.6 };
+      add(rc.line(x2, y2, x2 - L * Math.cos(a - s), y2 - L * Math.sin(a - s), tip));
+      add(rc.line(x2, y2, x2 - L * Math.cos(a + s), y2 - L * Math.sin(a + s), tip));
+    }
+
+    function dline(x1, y1, x2, y2) {
+      add(rc.line(x1, y1, x2, y2, {
+        roughness: 0.5, stroke: BLACK, strokeWidth: 1, strokeLineDash: [7, 5]
+      }));
+    }
+
+    function t(x, y, str, sz, wt, anchor) {
+      var el = document.createElementNS(NS, 'text');
+      el.setAttribute('x', x);
+      el.setAttribute('y', y);
+      el.setAttribute('text-anchor', anchor || 'middle');
+      el.setAttribute('font-family', 'Caveat, cursive');
+      el.setAttribute('font-size', sz || 13);
+      el.setAttribute('font-weight', wt || 'normal');
+      el.setAttribute('fill', BLACK);
+      el.textContent = str;
+      svg.appendChild(el);
+    }
+
+    // ── Column separators ──────────────────────────────────────
+    add(rc.line(352, 12, 352, 800, {
+      roughness: 0.4, stroke: BLACK, strokeWidth: 0.8, strokeLineDash: [5, 5]
+    }));
+    add(rc.line(742, 12, 742, 800, {
+      roughness: 0.4, stroke: BLACK, strokeWidth: 0.8, strokeLineDash: [5, 5]
+    }));
+
+    // ── Column headers ─────────────────────────────────────────
+    t(176, 26, 'Federal Money + Policy Tailwind', 14, '700');
+    t(547, 26, 'Allocation Stack', 14, '700');
+    t(921, 26, 'Capital Ecosystem', 14, '700');
+
+    // ── Draw arrows BEFORE boxes so boxes cover endpoints ──────
+
+    arrow(308, 84, 382, 84);       // CMS → DPHHS
+    arrow(308, 260, 400, 175);     // Sheehy → Init5
+    arrow(547, 120, 547, 148);     // DPHHS → Init5
+    arrow(547, 203, 547, 232);     // Init5 → BSCC
+    arrow(547, 392, 547, 422);     // BSCC → Init5.1
+    arrow(547, 522, 547, 550);     // Init5.1 → CAPTN
+    dline(756, 240, 742, 360);     // VC → BSCC (credentialing)
+
+    // ══ LEFT COLUMN ════════════════════════════════════════════
+
+    box(28, 48, 280, 73);
+    t(168, 72, 'CMS / RHTP', 15, '700');
+    t(168, 91, '$233M Year One', 13, '600');
+    t(168, 109, '→ Montana DPHHS', 13, '600');
+
+    box(28, 188, 280, 140);
+    t(168, 213, 'Senator Sheehy', 15, '700');
+    t(168, 232, 'Critical Access for Veterans Care Act', 11, 'normal');
+    t(168, 248, '— routes VA patients to rural hospitals', 11, 'normal');
+    t(168, 270, 'CONNECT for Health Act', 11, 'normal');
+    t(168, 286, '— expands telehealth, more data to manage', 11, 'normal');
+    t(168, 312, '↳ both bills feed DPHHS / Initiative 5 demand', 11, '600');
+
+    // ══ CENTER COLUMN ══════════════════════════════════════════
+
+    box(382, 48, 330, 72);
+    t(547, 74, 'Montana DPHHS', 16, '700');
+    t(547, 94, 'Allocator — five initiatives', 12, 'normal');
+    t(547, 111, 'Montana: 4th-highest state allocation nationally', 11, 'normal');
+
+    box(400, 148, 295, 55);
+    t(547, 171, 'Initiative 5 — Technology Innovation', 13, '700');
+    t(547, 190, '$33M allocated', 12, 'normal');
+
+    // BSCC — dominant double-border node
+    heavyBox(355, 232, 384, 160);
+    t(547, 265, 'BIG SKY CARE CONNECT', 25, '700');
+    t(547, 293, '(BSCC)', 19, '700');
+    t(547, 318, 'State-designated Health Information Exchange', 11, '600');
+    t(547, 337, 'Q2 2026: Statement of Work finalizing with DPHHS now', 11, '600');
+    t(547, 358, '← This is the gate. Every Initiative 5.1 dollar', 12, '700');
+    t(547, 375, '   flows through or alongside it. →', 12, '700');
+
+    box(388, 422, 318, 100);
+    t(547, 447, 'Initiative 5.1 — Data Usability', 14, '700');
+    t(547, 466, '"Provider-facing tools to translate analytics', 11, 'normal');
+    t(547, 482, 'into actionable insights at point of care"', 11, 'normal');
+    t(547, 502, 'Named near-term use case: behavioral health bed registry', 10, '600');
+    t(547, 516, 'CAH transfer optimization, rural intervention monitoring', 10, 'normal');
+
+    box(398, 550, 298, 88);
+    t(547, 577, 'CAPTN', 22, '700');
+    t(547, 600, 'Decisioning intelligence layer', 13, 'normal');
+    t(547, 618, 'sits on top of BSCC + HIE data', 12, 'normal');
+    t(547, 635, 'makes the EHR investment actionable at point of care', 11, 'normal');
+
+    // ══ RIGHT COLUMN ═══════════════════════════════════════════
+
+    box(756, 108, 308, 48);
+    t(910, 137, 'Next Frontier Capital', 14, '600');
+
+    box(756, 182, 308, 48);
+    t(910, 211, 'Two Bear Capital', 14, '600');
+
+    box(756, 256, 308, 48);
+    t(910, 285, 'Frontier Angels', 14, '600');
+
+    t(910, 330, '"Local credentialing +', 12, 'normal');
+    t(910, 348, 'relationship access —', 12, 'normal');
+    t(910, 366, 'the bridge to the', 12, 'normal');
+    t(910, 384, 'procurement conversation"', 12, 'normal');
+
+    // ══ CALLOUT: Questions Worth Testing ═══════════════════════
+
+    box(752, 445, 326, 305, { roughness: 2.2, strokeWidth: 2 });
+    t(915, 468, '— Questions Worth Testing —', 13, '700');
+
+    t(760, 492, '1. Has CAPTN been in conversation with', 11, 'normal', 'start');
+    t(760, 508, '   Big Sky Care Connect?', 11, 'normal', 'start');
+    t(760, 524, '   Q2 2026 SOW finalizing now.', 11, '600', 'start');
+
+    t(760, 545, '2. Is DPHHS open to a third-party decisioning', 11, 'normal', 'start');
+    t(760, 561, '   layer on top of the HIE, or building in-house?', 11, 'normal', 'start');
+
+    t(760, 582, '3. What is the RFP timeline for', 11, 'normal', 'start');
+    t(760, 598, '   Initiative 5.1 specifically?', 11, 'normal', 'start');
+
+    t(760, 619, '4. eMACS fully replaced — RFP closed Feb 2026.', 11, 'normal', 'start');
+    t(760, 635, '   State: "a bottleneck for efficient govt ops."', 11, 'normal', 'start');
+    t(760, 651, '   Is there a CAPTN positioning angle', 11, 'normal', 'start');
+    t(760, 667, '   during the procurement system transition?', 11, '600', 'start');
+
+    t(760, 700, '   [ RFP DOA-2026-0230AL closed Feb 24, 2026.', 9, 'normal', 'start');
+    t(760, 714, '     State evaluating or has selected vendor. ]', 9, 'normal', 'start');
+
+    // ══ RFP CLOCK ══════════════════════════════════════════════
+
+    box(28, 800, 360, 62, { roughness: 2, strokeWidth: 2 });
+    t(208, 826, '~8 competitive RFPs by September 2026.', 14, '700');
+    t(208, 849, 'Window is open now.', 15, '700');
+  }
+})();
+</script>
+
+</body>
+</html>
